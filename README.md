@@ -19,12 +19,7 @@ Analyze and compare the usage patterns of annual members and casual riders of Cy
 ### Data Source
 
 The Data Sets are available to download [here](https://divvy-tripdata.s3.amazonaws.com/index.html) <br>
-Utilize Cyclistic's historical trip data, including:
-- Trip start/end times
-- Trip duration
-- User type (annual member vs. casual rider)
-- Station information (start and end stations)
-- ...
+The Data that I am using is from January 2020 to June 2024. 
 
 ### Analysis Structure
 
@@ -61,7 +56,7 @@ To analyze Cyclistic trip data and gain insights into how casual riders and annu
 
 ### Tools Used
 
-TBA
+Python, SQL, and Tableau Public
 
 
 
