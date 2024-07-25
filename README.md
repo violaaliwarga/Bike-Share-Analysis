@@ -33,3 +33,43 @@ This analysis will adhere to the standard data analysis process, which includes 
 4. A summary of the analysis,
 5. Supporting visualizations and key findings,
 6. Top three recommendations based on the analysis.
+
+## 2. Prepare
+
+### 2.1. Business Tasks
+
+Analyze how casual riders and annual members use Cyclistic bikes differently and use this data to recommend a strategy for converting casual riders into annual members.
+
+### 2.2. Data Source
+
+For this analysis, I used historical trip data covering January 2020 to June 2024. The dataset includes:
+* File Details: 52 .csv files
+* Contents: Trip start and end times, start and end stations, and rider type (Member, Single Ride, Day Pass)
+* Data Size: 22,929,303 rows and 13 columns (9 text, 4 float64)
+
+### 2.3. ROCCC
+
+The dataset is reliable, original, comprehensive, current, and properly cited.  It is released under a public license that permits analysis while protecting personally identifiable information (e.g., credit card details, addresses). The data is updated monthly. To ensure quality, trips taken by staff and those shorter than 60 seconds have been excluded by the source.
+
+## 3. Process
+
+### 3.1. Tools
+
+This analysis utilizes Python for data processing, specifically to combine the 52 .csv files into a single .csv file. Python is also employed for data cleaning and manipulation to ensure the dataset is prepared and ready for analysis.
+
+### 3.2. Combining Multiple .csv Files
+
+To consolidate the 52 .csv files into a single dataset, Python's pandas library is used. This process involves:
+* **Listing the Files**: Identifying all .csv files in the dataset folder.
+* **Loading the Files**: Reading each .csv file into separate DataFrames.
+* **Merging Data**: Combining these DataFrames into one comprehensive DataFrame.
+* **Checking Metadata**: Verifying column names, data types, and consistency across the DataFrames.
+* **Saving the Consolidated Data**: Exporting the combined DataFrame into a single .csv file for further analysis. This method ensures that all data is unified and readily accessible for subsequent cleaning and analysis.
+
+### 3.2.1. Listing the Files
+
+`import os
+
+# list out all files in the DataSet folder.
+data_files = os.listdir('/Users/violacitra/Data Analysis/Cyclistic Trip Data Set 2020 - 2024/DataSet')
+data_files`
