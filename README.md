@@ -1,7 +1,7 @@
 # Cyclistic Bike Share Analysis
 <img width="671" alt="Screenshot 2024-07-24 at 7 26 08 PM" src="https://github.com/user-attachments/assets/a29c67c8-da6a-47a8-be44-eba6e524d8d6">
 
-*This project was done to complete the [Google Data Analytics Certification][url](https://www.coursera.org/professional-certificates/google-data-analytics?utm_medium=sem&utm_source=gg&utm_campaign=B2C_NAMER_google-data-analytics_google_FTCOF_professional-certificates_country-US&campaignid=12504215975&adgroupid=122709142687&device=c&keyword=google%20analytics%20certification%20free&matchtype=b&network=g&devicemodel=&adposition=&creativeid=504570191916&hide_mobile_promo&gad_source=1&gclid=CjwKCAjw74e1BhBnEiwAbqOAjJrYV0Nn5E8vWY-cHpUxxAqwEufc15VCPLNM_TJMWLIAah9E1zHkOBoCxQ8QAvD_BwE) from Coursera*
+*This project was done to complete the [Google Data Analytics Certification][https://www.coursera.org/professional-certificates/google-data-analytics] from Coursera*
 
 ### About Cyclistic
 
