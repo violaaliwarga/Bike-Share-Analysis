@@ -49,7 +49,7 @@ For this analysis, I used historical trip data covering January 2020 to June 202
 
 ### 2.3. ROCCC
 
-The dataset is reliable, original, comprehensive, current, and properly cited.  It is released under a public license that permits analysis while protecting personally identifiable information (e.g., credit card details, addresses). The data is updated monthly. To ensure quality, trips taken by staff and those shorter than 60 seconds have been excluded by the source.
+[The dataset]((https://divvybikes.com/system-data)) is reliable, original, comprehensive, current, and properly cited.  It is released under a public [license]((https://www.divvybikes.com/data-license-agreement)) that permits analysis while protecting personally identifiable information (e.g., credit card details, addresses). The data is updated monthly. To ensure quality, trips taken by staff and those shorter than 60 seconds have been excluded by the source.
 
 ## 3. Process
 
