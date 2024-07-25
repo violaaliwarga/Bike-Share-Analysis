@@ -70,6 +70,6 @@ To consolidate the 52 .csv files into a single dataset, Python's pandas librar
 
 `import os
 
-# list out all files in the DataSet folder.
+--list out all files in the DataSet folder.
 data_files = os.listdir('/Users/violacitra/Data Analysis/Cyclistic Trip Data Set 2020 - 2024/DataSet')
 data_files`
