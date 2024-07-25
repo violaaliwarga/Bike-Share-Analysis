@@ -1,5 +1,6 @@
 # Cyclistic Bike Share Analysis
-<img width="671" alt="Screenshot 2024-07-24 at 7 26 08 PM" src="https://github.com/user-attachments/assets/80c31553-6fb6-4613-8ff7-4b60a21930e4">
+<img width="671" alt="Screenshot 2024-07-24 at 7 26 08 PM" src="https://github.com/user-attachments/assets/a29c67c8-da6a-47a8-be44-eba6e524d8d6">
+
 
 ### About Cyclistic
 
