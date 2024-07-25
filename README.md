@@ -66,4 +66,3 @@ To consolidate the 52 .csv files into a single dataset, Python's pandas librar
 * **Checking Metadata**: Verifying column names, data types, and consistency across the DataFrames.
 * **Saving the Consolidated Data**: Exporting the combined DataFrame into a single .csv file for further analysis. This method ensures that all data is unified and readily accessible for subsequent cleaning and analysis.
 
-
