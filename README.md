@@ -3,6 +3,8 @@
 
 *This project was done to complete the [Google Data Analytics Certification](https://www.coursera.org/professional-certificates/google-data-analytics) on Coursera. The names of the company and any individuals mentioned here are entirely fictional, but the analysis uses a real dataset provided under a public license.*
 
+*The output and the complete code for all these steps are available in a separate file [here].*
+
 ## Overview and Analysis Approach
 
 Cyclistic, founded in 2016, operates a successful bike-share program in Chicago, featuring 5,824 geotracked bicycles distributed across 692 stations. The company offers flexible pricing plans, including single-ride passes, full-day passes, and annual memberships. The strategic goal is to convert casual riders into more profitable annual members. The marketing director aims to maximize annual memberships by analyzing usage patterns between casual riders and annual members, and using these insights to craft a targeted conversion strategy, supported by data-driven recommendations and visualizations for executive approval. <br>
@@ -89,5 +91,5 @@ I also checked the correlation between the variables to understand how missing v
 <img width="588" alt="Screenshot 2024-07-30 at 3 49 55 PM" src="https://github.com/user-attachments/assets/10d5a4e5-34f2-4663-9940-d35019a9742a"> <br>
 As shown in the picture above, the correlation coefficients ranged from -0.01 to 1.0. What does it mean? A coefficient close to 0, such as -0.01, indicates a very weak relationship between the variables. In this case, missing data in one column has little to no correlation with missing data in other columns. Whereas a coefficient of 1.0 suggests a perfect positive correlation, meaning that if one column has missing data, the other column will also have missing data in exactly the same pattern.
 
-
-The output and the complete code for these steps are available in a separate file [here]. This detailed analysis of missing data helped guide the subsequent data cleaning and imputation strategies, ensuring a thorough and methodical approach to preparing the dataset for analysis.
+#### 3.3.3. Handling Missing Data
+After the steps above and analyzing the result, I decided to 
