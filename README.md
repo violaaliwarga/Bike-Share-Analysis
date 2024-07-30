@@ -86,7 +86,7 @@ I plotted the distribution of missing values to identify patterns and the extent
 
 ##### c. Analyzing Correlations
 I also checked the correlation between the variables to understand how missing values might relate to other features in the dataset. <br>
-<img width="588" alt="Screenshot 2024-07-30 at 3 49 55 PM" src="https://github.com/user-attachments/assets/10d5a4e5-34f2-4663-9940-d35019a9742a">
+<img width="588" alt="Screenshot 2024-07-30 at 3 49 55 PM" src="https://github.com/user-attachments/assets/10d5a4e5-34f2-4663-9940-d35019a9742a"> <br>
 As shown in the picture above, the correlation coefficients ranged from -0.01 to 1.0. What does it mean? A coefficient close to 0, such as -0.01, indicates a very weak relationship between the variables. In this case, missing data in one column has little to no correlation with missing data in other columns. Whereas a coefficient of 1.0 suggests a perfect positive correlation, meaning that if one column has missing data, the other column will also have missing data in exactly the same pattern.
 
 
