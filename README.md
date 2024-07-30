@@ -66,3 +66,28 @@ To consolidate the 52 .csv files into a single dataset, Python's pandas librar
 * **Checking Metadata**: Verifying column names, data types, and consistency across the DataFrames.
 * **Saving the Consolidated Data**: Exporting the combined DataFrame into a single .csv file for further analysis. This method ensures that all data is unified and readily accessible for subsequent cleaning and analysis.
 
+### 3.3. Data Cleaning & Manipulation
+
+Handling missing data is a critical step in data cleaning and manipulation, especially with historical datasets like the Cyclistic Bike-Share data. Missing data can arise from various factors, including human error, system glitches, or incomplete data collection processes. Here’s a detailed approach to how I dealt with the missing values:
+
+#### 3.3.1. Checking for Missing Data
+First, I checked for the presence of missing data in the dataset. Here are what I got:
+<img width="318" alt="Screenshot 2024-07-30 at 3 40 29 PM" src="https://github.com/user-attachments/assets/36a1ff23-5b1f-4e8e-abf0-656efc7cf746">
+
+#### 3.3.2. Identify Missing Data
+To effectively handle missing data, it's essential to first determine the extent of missing values in each column. This step informs the appropriate methods for addressing the missing data. Here’s how I approached it:
+
+##### a. Flagging Missing Data
+I flagged the missing values in each column by converting False (no missing value) and True (missing value) to 0 and 1, respectively. This conversion is crucial because it transforms the missing data indicators into numerical values, which are necessary for subsequent analysis.
+
+##### b. Visualizing Missing Data Distribution
+I plotted the distribution of missing values to identify patterns and the extent of missing data across the dataset. Here's the result:
+<img width="407" alt="Screenshot 2024-07-30 at 3 49 00 PM" src="https://github.com/user-attachments/assets/7e0a898c-a383-4d1a-b0e1-ea1522ca4021">
+
+##### c. Analyzing Correlations
+I also checked the correlation between the variables to understand how missing values might relate to other features in the dataset.
+<img width="588" alt="Screenshot 2024-07-30 at 3 49 55 PM" src="https://github.com/user-attachments/assets/10d5a4e5-34f2-4663-9940-d35019a9742a">
+As shown in the picture above, the correlation coefficients ranged from -0.01 to 1.0. What does it mean? A coefficient close to 0, such as -0.01, indicates a very weak relationship between the variables. In this case, missing data in one column has little to no correlation with missing data in other columns. Whereas a coefficient of 1.0 suggests a perfect positive correlation, meaning that if one column has missing data, the other column will also have missing data in exactly the same pattern.
+
+
+The output and the complete code for these steps are available in a separate file [here]. This detailed analysis of missing data helped guide the subsequent data cleaning and imputation strategies, ensuring a thorough and methodical approach to preparing the dataset for analysis.
