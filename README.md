@@ -73,14 +73,14 @@ To consolidate the 52 .csv files into a single dataset, Python's pandas librar
 Handling missing data is a critical step in data cleaning and manipulation, especially with historical datasets like the Cyclistic Bike-Share data. Missing data can arise from various factors, including human error, system glitches, or incomplete data collection processes. Here’s a detailed approach to how I dealt with the missing values:
 
 #### 3.3.1. Checking for Missing Data
-First, I checked for the presence of missing data in the dataset. Here are what I got: <br>
+First, I checked for the presence of missing data in the dataset using ***pandas.isnull()***. Here are what I got: <br>
 <img width="318" alt="Screenshot 2024-07-30 at 3 40 29 PM" src="https://github.com/user-attachments/assets/36a1ff23-5b1f-4e8e-abf0-656efc7cf746">
 
 #### 3.3.2. Identify Missing Data
-To effectively handle missing data, it's essential to first determine the extent of missing values in each column. This step informs the appropriate methods for addressing the missing data. Here’s how I approached it:
+To effectively handle missing data, it's essential to first determine the extent of missing values in each column. This step informs the appropriate methods for addressing the missing data. Here are the steps that I took:
 
 ##### a. Flagging Missing Data
-I flagged the missing values in each column by converting False (no missing value) and True (missing value) to 0 and 1, respectively. This conversion is crucial because it transforms the missing data indicators into numerical values, which are necessary for subsequent analysis.
+I flagged the missing values in each column by converting False (no missing value) and True (missing value) to 0 and 1, respectively, using ***pandas.astype()***. This conversion is crucial because it transforms the missing data indicators into numerical values, which are necessary for subsequent analysis.
 
 ##### b. Visualizing Missing Data Distribution
 I plotted the distribution of missing values to identify patterns and the extent of missing data across the dataset. Here's the result: <br>
