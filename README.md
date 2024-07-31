@@ -96,7 +96,7 @@ After the steps above and analyzing the results, I decided on two approaches reg
 
 ##### Your phrasing is mostly clear, but it could be refined for better readability and correctness. Here's a revised version:
 
-### a. Removing Rows with Missing Values
+##### a. Removing Rows with Missing Values
 For the columns **`end_lat`** and **`end_lng`**, I decided to remove the rows with missing values. This decision is based on the small amount of missing data in these columns (only 0.1%) and the correlation of these variables with other columns that also have missing data, as seen above in Section 3.3.2.c..
 
 ##### b. Imputing Missing Data with a Placeholder Value 'Unknown'
