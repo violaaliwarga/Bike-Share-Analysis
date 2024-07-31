@@ -83,13 +83,21 @@ To effectively handle missing data, it's essential to first determine the extent
 I flagged the missing values in each column by converting False (no missing value) and True (missing value) to 0 and 1, respectively, using ***pandas.astype()***. This conversion is crucial because it transforms the missing data indicators into numerical values, which are necessary for subsequent analysis.
 
 ##### b. Visualizing Missing Data Distribution
-I plotted the distribution of missing values to identify patterns and the extent of missing data across the dataset. Here's the result: <br>
+I plotted the distribution of missing values using Matplotlib Plotting function to identify patterns and the extent of missing data across the dataset. Here's the result: <br>
 <img width="407" alt="Screenshot 2024-07-30 at 3 49 00 PM" src="https://github.com/user-attachments/assets/7e0a898c-a383-4d1a-b0e1-ea1522ca4021">
 
 ##### c. Analyzing Correlations
-I also checked the correlation between the variables to understand how missing values might relate to other features in the dataset. <br>
+I also checked the correlation between the variables, using Pandas ***DataFrame.corr()***, to understand how missing values might relate to other features in the dataset. <br>
 <img width="588" alt="Screenshot 2024-07-30 at 3 49 55 PM" src="https://github.com/user-attachments/assets/10d5a4e5-34f2-4663-9940-d35019a9742a"> <br>
 As shown in the picture above, the correlation coefficients ranged from -0.01 to 1.0. What does it mean? A coefficient close to 0, such as -0.01, indicates a very weak relationship between the variables. In this case, missing data in one column has little to no correlation with missing data in other columns. Whereas a coefficient of 1.0 suggests a perfect positive correlation, meaning that if one column has missing data, the other column will also have missing data in exactly the same pattern.
 
 #### 3.3.3. Handling Missing Data
-After the steps above and analyzing the result, I decided to 
+After the steps above and analyzing the results, I decided on two approaches regarding on what I was going to do to those missing data.
+
+##### Your phrasing is mostly clear, but it could be refined for better readability and correctness. Here's a revised version:
+
+### a. Removing Rows with Missing Values
+For the columns **`end_lat`** and **`end_lng`**, I decided to remove the rows with missing values. This decision is based on the small amount of missing data in these columns (only 0.1%) and the correlation of these variables with other columns that also have missing data, as seen above in Section 3.3.2.c..
+
+##### b. Imputing Missing Data with a Placeholder Value 'Unknown'
+For the columns **`start_station_name`**, **`start_station_id`**, **`end_station_name`**, and **`end_station_id`**, due to the high volume of missing data (more than 5%) and their somewhat strong correlation with each other (ranging from 0.43 to 1), I decided that imputing a placeholder value 'Unknown' is the best approach.
