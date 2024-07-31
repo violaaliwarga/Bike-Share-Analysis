@@ -83,7 +83,7 @@ To effectively handle missing data, it's essential to first determine the extent
 I flagged the missing values in each column by converting False (no missing value) and True (missing value) to 0 and 1, respectively, using `pandas.astype()`. This conversion is crucial because it transforms the missing data indicators into numerical values, which are necessary for subsequent analysis.
 
 ##### b. Visualizing Missing Data Distribution
-I plotted the distribution of missing values using Matplotlib Plotting function to identify patterns and the extent of missing data across the dataset. Here's the result: <br>
+I plotted the distribution of missing values using Matplotlib `plot()` function to identify patterns and the extent of missing data across the dataset. Here's the result: <br>
 <img width="407" alt="Screenshot 2024-07-30 at 3 49 00 PM" src="https://github.com/user-attachments/assets/7e0a898c-a383-4d1a-b0e1-ea1522ca4021">
 
 ##### c. Analyzing Correlations
