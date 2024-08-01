@@ -97,10 +97,18 @@ As shown in the picture above, the correlation coefficients ranged from -0.01 to
 #### 3.3.3. Handling Missing Data
 After the steps above and analyzing the results, I decided on two approaches regarding on what I was going to do to those missing data.
 
-##### Your phrasing is mostly clear, but it could be refined for better readability and correctness. Here's a revised version:
-
 ##### a. Removing Rows with Missing Values
 For the columns **`end_lat`** and **`end_lng`**, I decided to remove the rows with missing values. This decision is based on the small amount of missing data in these columns (only 0.1%) and the correlation of these variables with other columns that also have missing data, as seen above in Section 3.3.2.c..
 
-##### b. Imputing Missing Data with a Placeholder Value 'Unknown'
-For the columns **`start_station_name`**, **`start_station_id`**, **`end_station_name`**, and **`end_station_id`**, due to the high volume of missing data (more than 5%) and their somewhat strong correlation with each other (ranging from 0.43 to 1), I decided that imputing a placeholder value 'Unknown' is the best approach.
+##### b. Imputing Missing Values using K-nearest neighbors (KNN)
+For the columns **`start_station_name`**, **`start_station_id`**, **`end_station_name`**, and **`end_station_id`**, I noticed a substantial amount of missing data, more than 5% of the total. Since these columns tell us where each bike trip starts and ends, they’re really important for the analysis. Instead of just getting rid of the incomplete records, I decided to fill in the missing data using a method called K-nearest neighbors (KNN).
+
+Why I chose KNN? KNN is a machine learning method that works on a simple idea: the closer two data points are to each other, the more similar they are. So, if we’re missing some station information, we can look at the nearest data points to guess what the missing values might be. This method is particularly useful here because station names and IDs that are close together often correspond to similar or nearby trips. Below are the step-by-step process of this imputation:
+
+- Feature Selection: I picked out the most relevant columns that might help in predicting the missing station data. This included things like the start and end times of the trips, trip duration, and location info if it was available.
+- Normalization: To make sure everything was on the same scale, I adjusted the numerical data so that no one feature dominated the calculations. This step is important because KNN calculates distances between points, and unscaled data could mess with that.
+- Choosing k: I experimented with different numbers of neighbors (k) to see which gave the best results. Picking the right k is crucial—too few neighbors might make the predictions too specific, while too many could make them too general.
+- Imputation Process: For each missing value, the algorithm looked at the k nearest data points and filled in the gap based on the most common or average value from those neighbors.
+- Post-Imputation Check: After filling in the missing data, I double-checked to make sure the imputed values made sense and matched up logically (e.g., station names matched their corresponding IDs).
+
+By using KNN, I was able to fill in the missing station data accurately, keeping the dataset complete and ensuring that my analysis would be as accurate as possible.
