@@ -101,11 +101,6 @@ After the steps above and analyzing the results, I decided on two approaches reg
 For the columns **`end_lat`** and **`end_lng`**, I decided to remove the rows with missing values. This decision is based on the small amount of missing data in these columns (only 0.1%) and the correlation of these variables with other columns that also have missing data, as seen above in Section 3.3.2.c..
 
 ##### b. Imputing Missing Values using K-nearest neighbors (KNN)
-Yes, your explanation is clear and effectively communicates the steps you took to handle the missing data using K-nearest neighbors (KNN). The text is easy to understand, and it flows well. Here’s a slightly refined version with a few minor tweaks for clarity:
-
----
-
-### b. Imputing Missing Values using K-nearest neighbors (KNN)
 I noticed a substantial amount of missing data, more than 5%, in the columns **`start_station_name`**, **`start_station_id`**, **`end_station_name`**, and **`end_station_id`**. Since these columns tell us where each bike trip starts and ends, they’re really important for the analysis. Instead of just getting rid of the incomplete records, I decided to fill in the missing data using a method called K-nearest neighbors (KNN).
 
 A little bit about KNN. KNN is a machine learning technique based on a simple idea: data points that are close to each other tend to be similar. So, if some station info is missing, we can look at the closest data points to make an educated guess. This method is particularly handy here because station names and IDs that are near each other usually correspond to nearby trips. Here’s how I went about it:
