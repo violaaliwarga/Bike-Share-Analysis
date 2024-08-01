@@ -62,10 +62,10 @@ This analysis utilizes Python for data processing, specifically to combine the 5
 ### 3.2. Combining Multiple .csv Files
 
 To consolidate the 52 .csv files into a single dataset, Python's pandas library is used. This process involves:
-* **Listing the Files**: Identifying all .csv files in the dataset folder. <br>
+* **Listing the Files**: Identifying all .csv files in the dataset folder using `os.listdir()`. <br>
   <img width="201" alt="Screenshot 2024-07-31 at 5 00 51 PM" src="https://github.com/user-attachments/assets/f0695e66-c860-4cb8-a9e7-ef270d1fdc38"> <br>
-* **Loading the Files**: Reading each .csv file into separate DataFrames.
-* **Merging Data**: Combining these DataFrames into one comprehensive DataFrame.<br>
+* **Loading the Files**: Reading each .csv file into separate DataFrames using `pd.read_csv()`.
+* **Merging Data**: Combining these DataFrames into one comprehensive DataFrame using `pd.concat()`.<br>
   <img width="333" alt="Screenshot 2024-07-31 at 4 58 44 PM" src="https://github.com/user-attachments/assets/f74063d6-23a9-406f-a2d4-9e98686e6243"> <br>
 * **Checking Metadata**: Verifying column names, convert necessary data types, and consistency across the DataFrames.<br>
   <img width="277" alt="Screenshot 2024-07-31 at 4 59 08 PM" src="https://github.com/user-attachments/assets/68454251-bcbe-4492-bfab-943e812a53e3"> <br>
