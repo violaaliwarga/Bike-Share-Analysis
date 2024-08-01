@@ -64,10 +64,10 @@ This analysis utilizes Python for data processing, specifically to combine the 5
 To consolidate the 52 .csv files into a single dataset, Python's pandas library is used. This process involves:
 * **Listing the Files**: Identifying all .csv files in the dataset folder.
 * **Loading the Files**: Reading each .csv file into separate DataFrames.
-* **Merging Data**: Combining these DataFrames into one comprehensive DataFrame.
-  <img width="333" alt="Screenshot 2024-07-31 at 4 58 44 PM" src="https://github.com/user-attachments/assets/f74063d6-23a9-406f-a2d4-9e98686e6243">
-* **Checking Metadata**: Verifying column names, convert necessary data types, and consistency across the DataFrames.
-  <img width="277" alt="Screenshot 2024-07-31 at 4 59 08 PM" src="https://github.com/user-attachments/assets/68454251-bcbe-4492-bfab-943e812a53e3">
+* **Merging Data**: Combining these DataFrames into one comprehensive DataFrame.<br>
+  <img width="333" alt="Screenshot 2024-07-31 at 4 58 44 PM" src="https://github.com/user-attachments/assets/f74063d6-23a9-406f-a2d4-9e98686e6243"> <br>
+* **Checking Metadata**: Verifying column names, convert necessary data types, and consistency across the DataFrames.<br>
+  <img width="277" alt="Screenshot 2024-07-31 at 4 59 08 PM" src="https://github.com/user-attachments/assets/68454251-bcbe-4492-bfab-943e812a53e3"> <br>
 * **Saving the Consolidated Data**: Exporting the combined DataFrame into a single .csv file for further analysis. This method ensures that all data is unified and readily accessible for subsequent cleaning and analysis.
 
 ### 3.3. Data Cleaning & Manipulation
