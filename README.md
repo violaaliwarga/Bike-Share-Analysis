@@ -103,12 +103,21 @@ For the columns **`end_lat`** and **`end_lng`**, I decided to remove the rows wi
 ##### b. Imputing Missing Values using K-nearest neighbors (KNN)
 For the columns **`start_station_name`**, **`start_station_id`**, **`end_station_name`**, and **`end_station_id`**, I noticed a substantial amount of missing data, more than 5% of the total. Since these columns tell us where each bike trip starts and ends, they’re really important for the analysis. Instead of just getting rid of the incomplete records, I decided to fill in the missing data using a method called K-nearest neighbors (KNN).
 
-Why I chose KNN? KNN is a machine learning method that works on a simple idea: the closer two data points are to each other, the more similar they are. So, if we’re missing some station information, we can look at the nearest data points to guess what the missing values might be. This method is particularly useful here because station names and IDs that are close together often correspond to similar or nearby trips. Below are the step-by-step process of this imputation:
+KNN is a machine learning technique based on a simple idea: data points that are close to each other tend to be similar. So, if some station info is missing, we can look at the closest data points to make an educated guess. This method is particularly handy here because station names and IDs that are near each other usually correspond to nearby trips. Here’s how I went about it:
 
-- Feature Selection: I picked out the most relevant columns that might help in predicting the missing station data. This included things like the start and end times of the trips, trip duration, and location info if it was available.
-- Normalization: To make sure everything was on the same scale, I adjusted the numerical data so that no one feature dominated the calculations. This step is important because KNN calculates distances between points, and unscaled data could mess with that.
-- Choosing k: I experimented with different numbers of neighbors (k) to see which gave the best results. Picking the right k is crucial—too few neighbors might make the predictions too specific, while too many could make them too general.
-- Imputation Process: For each missing value, the algorithm looked at the k nearest data points and filled in the gap based on the most common or average value from those neighbors.
-- Post-Imputation Check: After filling in the missing data, I double-checked to make sure the imputed values made sense and matched up logically (e.g., station names matched their corresponding IDs).
+1. Preprocess the Data
+- List columns to exclude from scaling/imputation: I first made a list of columns that shouldn't be scaled or imputed (like IDs or datetime columns).
+- Convert categorical columns to numerical: I used LabelEncoder to convert categorical columns into numerical values, which is necessary for KNN to work. I excluded columns like ride_id and datetime columns from this step.
+- Identify columns for imputation: I made a list of the columns that actually needed imputation.
 
-By using KNN, I was able to fill in the missing station data accurately, keeping the dataset complete and ensuring that my analysis would be as accurate as possible.
+2. Apply KNN Imputation
+- Normalize the data: Though optional, I normalized the data to ensure that all features contributed equally to the KNN calculations.
+- Perform KNN Imputation: I used the KNN algorithm to fill in the missing values by looking at the nearest data points.
+- Inverse transform the scaling: After imputing the missing values, I reversed the scaling to bring the data back to its original scale.
+
+3. Post-process the Data
+- Convert numerical columns back to original categorical: I converted any numerical columns that were originally categorical back to their original form.
+- Reattach the excluded columns: I then reattached the columns that were excluded from the scaling and imputation process.
+- Display the imputed DataFrame: Finally, I reviewed the newly completed DataFrame to ensure everything was in order.
+
+By using KNN, I was able to fill in the missing station data accurately, keeping the dataset intact and making sure my analysis remained reliable.
