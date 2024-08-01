@@ -69,15 +69,14 @@ To consolidate the 52 .csv files into a single dataset, Python's pandas librar
   <img width="333" alt="Screenshot 2024-07-31 at 4 58 44 PM" src="https://github.com/user-attachments/assets/f74063d6-23a9-406f-a2d4-9e98686e6243"> <br>
 * **Checking Metadata**: Verifying column names, convert necessary data types, and consistency across the DataFrames.<br>
   <img width="277" alt="Screenshot 2024-07-31 at 4 59 08 PM" src="https://github.com/user-attachments/assets/68454251-bcbe-4492-bfab-943e812a53e3"> <br>
-* **Saving the Consolidated Data**: Exporting the combined DataFrame into a single .csv file using `pd.df.to_csv()` for further analysis. <br>
-This method ensures that all data is unified and readily accessible for subsequent cleaning and analysis.
+* **Saving the Consolidated Data**: Exporting the combined DataFrame into a single .csv file using `DataFrame.to_csv()` for further analysis. This ensures that all data is unified and readily accessible for subsequent cleaning and analysis.
 
 ### 3.3. Data Cleaning & Manipulation
 
 Handling missing data is a critical step in data cleaning and manipulation, especially with historical datasets like the Cyclistic Bike-Share data. Missing data can arise from various factors, including human error, system glitches, or incomplete data collection processes. Here’s a detailed approach to how I dealt with the missing values:
 
 #### 3.3.1. Checking for Missing Data
-First, I checked for the presence of missing data in the dataset using `pandas.isnull()`. Here are what I got: <br>
+First, I checked for the presence of missing data in the dataset using `pandas.isnull()`. Here's what I got: <br>
 <img width="318" alt="Screenshot 2024-07-30 at 3 40 29 PM" src="https://github.com/user-attachments/assets/36a1ff23-5b1f-4e8e-abf0-656efc7cf746">
 
 #### 3.3.2. Identify Missing Data
