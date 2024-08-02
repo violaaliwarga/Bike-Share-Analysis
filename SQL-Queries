@@ -1,0 +1,67 @@
+Analysis in PostgreSQL According to the Outlined Objectives
+
+1. Understand the Usage Patterns of Annual Members and Casual Riders
+
+# Overall Ride Counts by Membership Type
+SELECT member_casual, COUNT(*) AS ride_count
+FROM trips
+GROUP BY member_casual
+ORDER BY ride_count DESC;
+
+# Average Ride Duration by Membership Type
+SELECT member_casual, ROUND(AVG(duration_minutes)) AS avg_duration
+FROM trips
+GROUP BY member_casual;
+
+# Distribution of Rides by Hour
+SELECT hour, member_casual, COUNT(*) AS ride_count
+FROM trips
+GROUP BY hour, member_casual
+ORDER BY hour;
+
+# Popular Start Stations by Membership Type
+SELECT start_station_name, member_casual, COUNT(*) AS ride_count
+FROM trips
+GROUP BY start_station_name, member_casual
+ORDER BY ride_count DESC
+LIMIT 10;
+
+# Ride Day Preference
+SELECT EXTRACT(DOW FROM started_at) AS day_of_week, member_casual, COUNT(*) AS ride_count
+FROM trips
+GROUP BY day_of_week, member_casual
+ORDER BY day_of_week;
+
+
+2. Identify Motivations for Casual Riders to Purchase Annual Memberships
+
+# Favorite Bike Types for Casual Riders
+SELECT rideable_type, COUNT(*) AS ride_count, member_casual
+FROM trips
+WHERE member_casual = 'casual'
+GROUP BY rideable_type, member_casual
+ORDER BY ride_count DESC;
+
+# Average Ride Duration for Casual Riders
+SELECT AVG(duration_minutes) AS avg_duration
+FROM trips
+WHERE member_casual = 'casual';
+
+# Popular Routes Among Casual Riders
+SELECT start_station_name, end_station_name, COUNT(*) AS ride_count
+FROM trips
+WHERE member_casual = 'casual'
+GROUP BY start_station_name, end_station_name
+ORDER BY ride_count DESC
+LIMIT 10;
+
+# Seasonal Trends in Casual Rider Usage
+SELECT month, COUNT(*) AS ride_count
+FROM trips
+WHERE member_casual = 'casual'
+GROUP BY month
+ORDER BY month;
+
+
+3. Develop Strategies Utilizing Digital Media to Encourage Casual Riders to Transition into Annual Members
+# Identify High-Frequency Casual Riders (Potential Targets for Membership Offers)
