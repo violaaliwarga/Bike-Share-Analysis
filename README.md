@@ -71,40 +71,43 @@ To consolidate the 52 .csv files into a single dataset, Python's pandas librar
 
 ### 3.3. Data Cleaning & Manipulation
 
-Handling missing data is a critical step in data cleaning and manipulation, especially with historical datasets like the Cyclistic Bike-Share data. Missing data can arise from various factors, including human error, system glitches, or incomplete data collection processes. Here’s a detailed approach to how I dealt with the missing values:
+Handling missing data is a critical step in preparing and manipulating datasets, especially when working with historical data like the Cyclistic Bike-Share dataset. Missing data can result from various factors such as human error, system glitches, or incomplete data collection. Below, I outline the systematic approach I used to address the missing data in this dataset.
 
 #### 3.3.1. Checking for Missing Data
-First, I checked for the presence of missing data in the dataset using `pandas.isnull()`. Here's what I got: <br>
+First, I assessed the presence of missing data in the dataset using pandas.isnull().sum(). The initial inspection revealed the following results: <br>
 <img width="199" alt="Screenshot 2024-08-02 at 10 39 39 AM" src="https://github.com/user-attachments/assets/1a73aaa5-ea8b-4757-b007-9b766b7a8d3e">
 
-#### 3.3.2. Identify Missing Data
-To effectively handle missing data, it's essential to first determine the extent of missing values in each column. This step informs the appropriate methods for addressing the missing data. Here are the steps that I took:
+#### 3.3.2. Identifying and Analyzing Missing Data
+To effectively manage missing data, it's crucial to understand both the extent and potential patterns of missing values in each column. Here's the approach I took:
 
 ##### a. Flagging Missing Data
-I flagged the missing values in each column by converting False (no missing value) and True (missing value) to 0 and 1, respectively, using `pandas.astype()`. This conversion is crucial because it transforms the missing data indicators into numerical values, which are necessary for subsequent analysis.
+I flagged missing values by converting the boolean indicators (False for no missing data, True for missing data) into numerical values (0 for no missing data, 1 for missing data) using pandas.astype(int). This conversion facilitated a more straightforward analysis of the missing data patterns.
 
-##### b. Visualizing Missing Data Distribution
-I plotted the distribution of missing values using Matplotlib `plot()` function to identify patterns and the extent of missing data across the dataset. Here's the result: <br>
+##### b. Visualizing the Distribution of Missing Data
+Next, I visualized the distribution of missing data across the dataset using Matplotlib to identify any patterns. This visualization helped in understanding how widespread the missing data was and whether any specific columns were disproportionately affected. <br>
 <img width="306" alt="Screenshot 2024-08-02 at 10 39 53 AM" src="https://github.com/user-attachments/assets/9696c162-5862-46de-9192-b6f05c5351dd">
 
-##### c. Analyzing Correlations
-I also checked the correlation between the variables, using Pandas `DataFrame.corr()`, to understand how missing values might relate to other features in the dataset. <br>
+##### c. Analyzing Correlations Among Variables
+To understand how missing data in one column might relate to another, I calculated the correlation coefficients using pandas.DataFrame.corr(). <br>
 <img width="471" alt="Screenshot 2024-08-02 at 10 40 09 AM" src="https://github.com/user-attachments/assets/32370240-a1f6-4f4f-a42a-fab22f3071c0"> <br>
-As shown in the picture above, the correlation coefficients ranged from -0.01 to 1.0. What does it mean? A coefficient close to 0, such as -0.01, indicates a very weak relationship between the variables. In this case, missing data in one column has little to no correlation with missing data in other columns. Whereas a coefficient of 1.0 suggests a perfect positive correlation, meaning that if one column has missing data, the other column will also have missing data in exactly the same pattern.
+
+The correlation coefficients ranged from -0.01 to 1.0:
+- Near-zero correlation (e.g., -0.01): Indicates a very weak relationship between missing data in different columns, suggesting that missing values in one column don't strongly predict missing values in another.
+- Perfect correlation (e.g., 1.0): Indicates a strong relationship, where missing data in one column perfectly aligns with missing data in another.
 
 #### 3.3.3. Handling Missing Data
 After the steps above and analyzing the results, I decided on two approaches regarding on what I was going to do to those missing data.
 
 ##### a. Removing Rows with Missing Values
-For the columns **`end_lat`** and **`end_lng`**, I decided to remove the rows with missing values. This decision is based on the small amount of missing data in these columns (only 0.1%) and the correlation of these variables with other columns that also have missing data, as seen above in Section 3.3.2.c..
+For the columns `end_lat` and `end_lng`, I opted to remove rows with missing values. This decision was driven by the fact that less than 1% of the data was missing in these columns, minimizing the impact of data loss on the analysis.
 
 ##### b. Imputing Missing Values using K-nearest neighbors (KNN)
-I noticed a substantial amount of missing data, more than 5%, in the columns **`start_station_name`**, **`start_station_id`**, **`end_station_name`**, and **`end_station_id`**. Since these columns tell us where each bike trip starts and ends, they’re really important for the analysis. Instead of just getting rid of the incomplete records, I decided to fill in the missing data using a method called K-nearest neighbors (KNN).
+Columns `start_station_name`, `start_station_id`, `end_station_name`, and `end_station_id` had more than 10% missing data. Given their importance in identifying trip origins and destinations, I chose to impute the missing values using the K-nearest neighbors (KNN) algorithm.
 
-A little bit about KNN. KNN is a machine learning technique based on a simple idea: data points that are close to each other tend to be similar. So, if some station info is missing, we can look at the closest data points to make an educated guess. This method is particularly handy here because station names and IDs that are near each other usually correspond to nearby trips. Here’s how I went about it:
+A little bit about KNN. KNN is based on the principle that data points close to each other in feature space are likely similar. For missing station data, this method is particularly effective because stations that are geographically close often correspond to similar trips. Here’s how I applied KNN:
 
 1. Preprocess the Data
-First, I made a list of columns that shouldn’t be scaled or imputed (non-categorical variables). Then, I used `LabelEncoder` to convert categorical columns into numerical values, which is necessary for KNN to work. I excluded columns like `ride_id` and datetime columns from this step. Finally, I listed the columns that actually needed imputation.
+First, I made a list of columns that shouldn’t be scaled or imputed (non-categorical variables). Then, I used `LabelEncoder` to convert categorical columns into numerical values, which is necessary for KNN to work. I excluded columns `ride_id` from this step. Finally, I listed the columns that actually needed imputation.
 
 2. Apply KNN Imputation
 Although optional, I normalized the data to ensure that all features contributed equally to the KNN calculations. Then, I used the KNN algorithm to fill in the missing values by looking at the nearest data points. After imputing the missing values, I reversed the scaling to bring the data back to its original scale.
@@ -112,7 +115,7 @@ Although optional, I normalized the data to ensure that all features contributed
 3. Post-process the Data
 I converted any numerical columns that were originally categorical back to their original form. I then reattached the columns that were excluded from the scaling and imputation process. Finally, I reviewed the newly completed DataFrame to ensure everything was in order. <br>
 
-By using KNN, I was able to fill in the missing station data accurately, keeping the dataset intact and making sure my analysis remained reliable. <br>
+Using KNN allowed me to preserve the integrity of the dataset while accurately filling in critical missing values. <br>
 
 <img width="219" alt="Screenshot 2024-08-02 at 10 41 12 AM" src="https://github.com/user-attachments/assets/c0b8f2d7-8ffe-43ec-a5f9-0513ffe216fa"> <br>
 
@@ -120,10 +123,15 @@ By using KNN, I was able to fill in the missing station data accurately, keeping
 
 #### 3.3.4. Creating New Columns Necessary for Analysis
 
-##### a. Assigning Appropriate DataType to `started_at` & `ended_at`
-To be able to do what i want to do next, i have to convert the two columns to datetime datatype. <br>
+##### a. Converting `started_at` and `ended_at` to Datetime Format
+To facilitate further analysis, I converted the `started_at` and `ended_at` columns to datetime format. <br>
 <img width="272" alt="Screenshot 2024-08-02 at 10 41 43 AM" src="https://github.com/user-attachments/assets/1e00788d-038e-4a73-b5e8-b201265bbdbf">
 
-##### b. Creating New Columns `month`, `day`, `hour`, and `duration_minutes`
-To complete my analysis in the next step, i would like to make new columns.
+##### b. Creating New Columns
+To dig deeper into the data, I created new columns from the started_at and ended_at information: <br>
+- `month`: The month when the ride started. <br>
+- `day`: The day of the week when the ride started. <br>
+- `hour`: The hour of the day when the ride started. <br>
+- `duration_minutes`: The total duration of the ride in minutes. <br>
+
 <img width="328" alt="Screenshot 2024-08-02 at 10 42 04 AM" src="https://github.com/user-attachments/assets/977441ae-9531-4ff1-9299-7c9d28a59583">
