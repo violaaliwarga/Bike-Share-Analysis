@@ -137,7 +137,7 @@ To dig deeper into the data, I created new columns from the started_at and ended
 <img width="328" alt="Screenshot 2024-08-02 at 10 42 04 AM" src="https://github.com/user-attachments/assets/977441ae-9531-4ff1-9299-7c9d28a59583">
 
 
-## 4. Analysis
+## 4. Analysis & Visualization
 
 ### 4.1. Findings
 
@@ -146,11 +146,17 @@ To dig deeper into the data, I created new columns from the started_at and ended
 | member_casual  | total_rides |
 | ------------- | ------------- |
 | casual  | 9,072,123  |
-| cember | 13,820,576  |
+| member | 13,820,576  |
 
 Casual riders have made 9,072,123 rides, while annual members have made 13,820,576 rides. This significant difference indicates that annual members engage with the bike-share system more frequently, suggesting either higher engagement or more regular usage among this group.
 
 #### 4.1.2. What is the average ride duration for each membership type?
+
+| member_casual  | avg_duration |
+| ------------- | ------------- |
+| casual  | 28  |
+| member | 13  |
+
 The average ride duration for casual riders is 28 minutes, compared to 13 minutes for annual members. This suggests that casual riders generally take longer rides, while annual members tend to make shorter, more frequent trips.
 
 #### 4.1.3. How does the number of rides vary by day of the week for each membership type?
@@ -162,8 +168,8 @@ Casual riders experience peak bike usage in the late afternoon to early evening,
 #### 4.1.5. What are the top 10 most frequent routes taken by each membership type?
 Casual riders frequently travel to popular city locations such as DuSable Lake Shore Dr & Monroe St and Millennium Park. Annual members, however, often take routes like Ellis Ave & 60th St and University Ave & 57th St. This indicates that casual riders are more likely to visit notable city destinations, while annual members’ routes are more indicative of regular commuting or specific destinations.
 
-#### 4.1.6. What are the preferences for different rideable types by time of day and membership type?
-Both casual riders and annual members prefer electric bikes, but they differ in their usage times. Casual riders tend to use electric bikes more from 12:00 to 18:00, while annual members show a preference for electric bikes primarily in the morning and early afternoon.
+#### 4.1.6. How do rideable type preferences vary by time of day and membership type?**
+Casual riders prefer electric bikes, with peak usage occurring between 12:00 and 18:00, aligning with midday to early evening activities. In contrast, annual members favor classic bikes, especially during the morning and early afternoon hours, likely reflecting their use for regular commutes.
 
 #### 4.1.7. What are the popular ride duration segments for each membership type?
 For casual riders, the most popular ride duration segments are medium (3,634,730 rides) and long (2,396,451 rides) rides. Annual members prefer medium (6,891,259 rides) and short (3,139,432 rides) rides. This indicates that casual riders are inclined towards longer rides, while annual members favor shorter, more frequent trips.
@@ -184,10 +190,8 @@ Casual riders are active during peak commuting hours, with significant usage rec
 - **Usage Patterns**: Annual members ride more frequently and prefer shorter trips, while casual riders take longer rides and are more active on weekends.
 - **Ride Preferences**: Casual riders use bikes mainly in the late afternoon and visit popular city locations. Annual members ride more during weekdays and stick to regular commuting routes. Both groups prefer electric bikes, but at different times.
 - **Membership Motivation**: Casual riders frequently use popular stations and are active during peak commuting hours. Highlighting the convenience and savings of membership at these stations and times can be effective. Personalized offers and targeted promotions can address casual riders' specific needs and preferences.
-  
-## 5. Supporting Visualization
 
-## 6. Media Campaign Recommendations
+## 5. Recommendations
 
 1. **Highlight Usage Trends**: Focus campaigns on peak times and popular routes for casual riders. Target late afternoons to early evenings when casual riders are most active. Use metrics like click-through rates and engagement levels to gauge campaign success.
 2. **Promote Convenience and Savings**: Emphasize how memberships provide easier access to popular stations and offer savings during peak commuting hours. Highlight the benefits of membership for high-demand stations and times, and use feedback from new members to refine these messages.
