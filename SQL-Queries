@@ -69,7 +69,7 @@ WHERE member_casual = 'casual'
 GROUP BY rideable_type
 ORDER BY ride_count DESC;
 
-4.2.1. Proximity of Start and End Stations for Casual Riders
+4.1.10. Proximity of Start and End Stations for Casual Riders
 SELECT 
     start_station_name, 
     end_station_name, 
@@ -79,24 +79,7 @@ WHERE member_casual = 'casual'
 GROUP BY start_station_name, end_station_name
 ORDER BY ride_count DESC;
 
-4.2.2. Identifying Returning Casual Riders
-SELECT 
-    ride_id,
-    ride_count,
-    total_duration
-FROM (
-    SELECT 
-        ride_id,
-        COUNT(*) AS ride_count,
-        SUM(duration_minutes) AS total_duration
-    FROM trips
-    WHERE member_casual = 'casual'
-    GROUP BY ride_id
-) AS ride_stats
-WHERE ride_count > 1
-  AND total_duration > 0;
-
-4.2.3. Frequency of Casual Riders Using Bikes for Commuting Hours
+4.1.11. Frequency of Casual Riders Using Bikes for Commuting Hours
 SELECT 
     hour, 
     COUNT(*) AS ride_count
