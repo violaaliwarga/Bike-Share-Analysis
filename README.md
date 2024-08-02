@@ -178,6 +178,8 @@ Casual riders are active during peak commuting hours, with significant usage rec
 - **Usage Patterns**: Annual members ride more frequently and prefer shorter trips, while casual riders take longer rides and are more active on weekends.
 - **Ride Preferences**: Casual riders use bikes mainly in the late afternoon and visit popular city locations. Annual members ride more during weekdays and stick to regular commuting routes. Both groups prefer electric bikes, but at different times.
 - **Membership Motivation**: Casual riders frequently use popular stations and are active during peak commuting hours. Highlighting the convenience and savings of membership at these stations and times can be effective. Personalized offers and targeted promotions can address casual riders' specific needs and preferences.
+  
+## 5. Supporting Visualization and Detailed Findings
 
 ## 6. Media Campaign Recommendations
 
