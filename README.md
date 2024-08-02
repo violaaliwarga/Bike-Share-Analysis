@@ -135,3 +135,54 @@ To dig deeper into the data, I created new columns from the started_at and ended
 - `duration_minutes`: The total duration of the ride in minutes. <br>
 
 <img width="328" alt="Screenshot 2024-08-02 at 10 42 04 AM" src="https://github.com/user-attachments/assets/977441ae-9531-4ff1-9299-7c9d28a59583">
+
+
+## 4. Analysis
+
+### 4.1. Detailed Analysis
+
+#### 4.1.1. How do the total number of rides compare between membership types?
+Casual riders have made 9,072,123 rides, while annual members have made 13,820,576 rides. This significant difference indicates that annual members engage with the bike-share system more frequently, suggesting either higher engagement or more regular usage among this group.
+
+#### 4.1.2. What is the average ride duration for each membership type?
+The average ride duration for casual riders is 28 minutes, compared to 13 minutes for annual members. This suggests that casual riders generally take longer rides, while annual members tend to make shorter, more frequent trips.
+
+#### 4.1.3. How does the number of rides vary by day of the week for each membership type?
+Casual riders show peak usage on weekends, with the highest number of rides occurring on Saturday (1,920,554) and Sunday (1,606,326). Their lowest usage is observed on Tuesday (1,009,584). In contrast, annual members have their highest usage on Wednesday (2,177,786) and Tuesday (2,119,614), with the lowest on Sunday (1,623,645). This pattern indicates that casual riders are more active during weekends, while annual members use the service more regularly throughout the workweek.
+
+#### 4.1.4. What are the patterns of bike usage by hour of the day for each membership type?
+Casual riders experience peak bike usage in the late afternoon to early evening, especially between 17:00 and 18:00, with 868,303 rides. Annual members, on the other hand, peak in the morning and early afternoon, with the highest number of rides at 17:00 (1,464,955). Both casual and annual members show similar patterns of low usage late at night, from 00:00 to 04:00. This suggests that while casual riders favor the late afternoon and evening, annual members use bikes more during typical commuting hours.
+
+#### 4.1.5. What are the top 10 most frequent routes taken by each membership type?
+Casual riders frequently travel to popular city locations such as DuSable Lake Shore Dr & Monroe St and Millennium Park. Annual members, however, often take routes like Ellis Ave & 60th St and University Ave & 57th St. This indicates that casual riders are more likely to visit notable city destinations, while annual members’ routes are more indicative of regular commuting or specific destinations.
+
+#### 4.1.6. What are the preferences for different rideable types by time of day and membership type?
+Both casual riders and annual members prefer electric bikes, but they differ in their usage times. Casual riders tend to use electric bikes more from 12:00 to 18:00, while annual members show a preference for electric bikes primarily in the morning and early afternoon.
+
+#### 4.1.7. What are the popular ride duration segments for each membership type?
+For casual riders, the most popular ride duration segments are medium (3,634,730 rides) and long (2,396,451 rides) rides. Annual members prefer medium (6,891,259 rides) and short (3,139,432 rides) rides. This indicates that casual riders are inclined towards longer rides, while annual members favor shorter, more frequent trips.
+
+#### 4.1.8. What are the popular start times for casual riders on weekends?
+Casual riders predominantly start their rides between 13:00 and 15:00 on weekends, with the peak start time at 15:00 (310,933 rides). This suggests that the early to mid-afternoon is a popular time for casual riders to begin their rides on weekends.
+
+#### 4.1.9. How do casual riders use specific rideable types?
+Casual riders primarily use electric bikes, accounting for 3,939,580 rides, followed by classic bikes (3,428,739 rides) and docked bikes (1,703,804 rides). Electric bikes are the most popular among casual riders.
+
+#### 4.1.10. What are the most common start and end stations for casual riders?
+Casual riders frequently use stations such as Streeter Dr & Grand Ave, Michigan Ave & Oak St, and DuSable Lake Shore Dr & Monroe St. The most popular start and end station is Streeter Dr & Grand Ave, with 40,196 rides. Other notable stations include Michigan Ave & Oak St (19,954 rides) and DuSable Lake Shore Dr & Monroe St (19,823 rides). Casual riders also frequently visit Millennium Park, Buckingham Fountain, and Theater on the Lake, among others.
+
+#### 4.2.11. How frequently do casual riders use bikes during commuting hours?
+Casual riders are active during peak commuting hours, with significant usage recorded at 7:00 (192,003 rides), 8:00 (261,577 rides), 9:00 (285,530 rides), 16:00 (780,419 rides), 17:00 (868,303 rides), and 18:00 (770,277 rides). This shows a strong presence during both the morning and evening commuting periods.
+
+### 4.2. Analysis Summary
+- **Usage Patterns**: Annual members ride more frequently and prefer shorter trips, while casual riders take longer rides and are more active on weekends.
+- **Ride Preferences**: Casual riders use bikes mainly in the late afternoon and visit popular city locations. Annual members ride more during weekdays and stick to regular commuting routes. Both groups prefer electric bikes, but at different times.
+- **Membership Motivation**: Casual riders frequently use popular stations and are active during peak commuting hours. Highlighting the convenience and savings of membership at these stations and times can be effective. Personalized offers and targeted promotions can address casual riders' specific needs and preferences.
+
+## 6. Media Campaign Recommendations based on the analysis.
+
+- Highlight Usage Trends: Tailor digital media campaigns to focus on peak usage times and popular routes for casual riders. For instance, targeting late afternoon to early evening periods, when casual riders are most active, could increase campaign effectiveness. Include metrics like click-through rates and engagement levels to measure campaign success.
+  
+- Promote Convenience and Savings: Emphasize how a membership can streamline access to popular start and end stations and offer savings during key commuting hours. For example, promoting how a membership facilitates easier access to high-demand stations like Streeter Dr & Grand Ave and Millennium Park, and provides savings during peak commuting times, could be compelling. Consider gathering feedback from new members to refine these promotions.
+  
+- Customize Offers: Create personalized offers or promotions that cater to the specific needs of casual riders, such as frequent use of electric bikes or popular afternoon start times. Highlight how memberships align with their ride duration preferences and peak times to make the transition more appealing. Explore various promotion channels like social media, email campaigns, and local partnerships to enhance outreach.
