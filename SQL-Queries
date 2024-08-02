@@ -1,95 +1,109 @@
 Analysis in PostgreSQL According to the Outlined Objectives
 
-1. Understand the Usage Patterns of Annual Members and Casual Riders
+Queries List:
 
-# Overall Ride Counts by Membership Type
-SELECT member_casual, COUNT(*) AS ride_count
+1. Total Rides by Membership Type
+SELECT member_casual, COUNT(*) AS total_rides
 FROM trips
-GROUP BY member_casual
-ORDER BY ride_count DESC;
+GROUP BY member_casual;
 
-# Average Ride Duration by Membership Type
+2. Average Ride Duration by Membership Type
 SELECT member_casual, ROUND(AVG(duration_minutes)) AS avg_duration
 FROM trips
 GROUP BY member_casual;
 
-# Distribution of Rides by Hour
-SELECT hour, member_casual, COUNT(*) AS ride_count
+3. Rides by Day of the Week by Membership Type
+SELECT member_casual, day, COUNT(*) AS ride_count
 FROM trips
-GROUP BY hour, member_casual
-ORDER BY hour;
+GROUP BY member_casual, day
+ORDER BY member_casual, day;
 
-# Popular Start Stations by Membership Type
-SELECT start_station_name, member_casual, COUNT(*) AS ride_count
+4. Rides by Hour of the Day by Membership Type
+SELECT member_casual, hour, COUNT(*) AS total_rides
 FROM trips
-GROUP BY start_station_name, member_casual
+GROUP BY member_casual, hour
+ORDER BY member_casual, hour;
+
+5. Top 10 Most Frequent Routes by Membership Type
+SELECT member_casual, start_station_name, end_station_name, COUNT(*) AS ride_count
+FROM trips
+GROUP BY member_casual, start_station_name, end_station_name
 ORDER BY ride_count DESC
 LIMIT 10;
 
-# Ride Day Preference
-SELECT EXTRACT(DOW FROM started_at) AS day_of_week, member_casual, COUNT(*) AS ride_count
+6. Rideable Type Preference by Time of Day and Membership Type
+SELECT member_casual, hour, rideable_type, COUNT(*) AS ride_count
 FROM trips
-GROUP BY day_of_week, member_casual
-ORDER BY day_of_week;
+GROUP BY member_casual, hour, rideable_type
+ORDER BY member_casual, hour, rideable_type;
 
-# Cross-Analysis with Member Data
-SELECT member_casual, day AS day_of_week, hour, ROUND(AVG(duration_minutes)) AS avg_duration,COUNT(ride_id) AS ride_count
+7. Popular Ride Duration Segments
+SELECT 
+    member_casual,
+    CASE 
+        WHEN duration_minutes <= 5 THEN 'Short Ride'
+        WHEN duration_minutes <= 15 THEN 'Medium Ride'
+        WHEN duration_minutes <= 30 THEN 'Long Ride'
+        ELSE 'Very Long Ride'
+    END AS ride_segment,
+    COUNT(*) AS ride_count
 FROM trips
-GROUP BY member_casual, day_of_week, hour
-ORDER BY member_casual, day_of_week, hour;
+WHERE duration_minutes > 0
+GROUP BY member_casual, ride_segment
+ORDER BY member_casual, ride_segment;
 
-
-
-2. Identify Motivations for Casual Riders to Purchase Annual Memberships
-
-# Average Ride Duration for Casual Riders
-SELECT AVG(duration_minutes) AS avg_duration
-FROM trips
-WHERE member_casual = 'casual';
-
-# Cluster Analysis on Ride Duration and Time of Day
-SELECT EXTRACT(DOW FROM started_at) AS day_of_week, hour, rideable_type, AVG(duration_minutes) AS avg_duration, COUNT(ride_id) AS ride_count
-FROM trips
-WHERE member_casual = 'casual'
-GROUP BY day_of_week, hour, rideable_type
-ORDER BY day_of_week, hour;
-
-# Popular Routes Among Casual Riders
-SELECT start_station_name, end_station_name, COUNT(*) AS ride_count
+8. Proximity of Start and End Stations for Casual Riders
+SELECT 
+    start_station_name, 
+    end_station_name, 
+    COUNT(*) AS ride_count
 FROM trips
 WHERE member_casual = 'casual'
 GROUP BY start_station_name, end_station_name
-ORDER BY ride_count DESC
-LIMIT 10;
-
-# Seasonal Trends in Casual Rider Usage
-SELECT month, COUNT(ride_id) AS ride_count, ROUND(AVG(duration_minutes)) AS avg_duration
-FROM trips
-WHERE member_casual = 'casual'
-GROUP BY month
-ORDER BY month;
-
-
-3. Develop Strategies Utilizing Digital Media to Encourage Casual Riders to Transition into Annual Members
-
-# Identify Returned Casual Riders (Potential Targets for Membership Offers)
-SELECT member_casual, ride_id, COUNT(ride_id) AS ride_count
-FROM trips
-WHERE member_casual = 'casual'
-GROUP BY member_casual, ride_id
-HAVING COUNT(ride_id) > 1
 ORDER BY ride_count DESC;
 
-# Identify Preferred Times of Day for Casual Riders (For Targeted Ads)
-SELECT hour, COUNT(*) AS ride_count
+9. Identifying Returning Casual Riders
+SELECT 
+    ride_id,
+    ride_count,
+    total_duration
+FROM (
+    SELECT 
+        ride_id,
+        COUNT(*) AS ride_count,
+        SUM(duration_minutes) AS total_duration
+    FROM trips
+    WHERE member_casual = 'casual'
+    GROUP BY ride_id
+) AS ride_stats
+WHERE ride_count > 1
+  AND total_duration > 0;
+
+10. Popular Start Times for Casual Riders on Weekends
+SELECT 
+    hour, 
+    COUNT(*) AS ride_count
 FROM trips
 WHERE member_casual = 'casual'
+  AND day IN ('Saturday', 'Sunday')
 GROUP BY hour
 ORDER BY ride_count DESC;
 
-# Analyze Popular Bike Types Among Casual Riders
-SELECT rideable_type, COUNT(*) AS ride_count
+11. Analysis of Casual Riders Using Specific Rideable Types
+SELECT 
+    rideable_type, 
+    COUNT(*) AS ride_count
 FROM trips
 WHERE member_casual = 'casual'
 GROUP BY rideable_type
 ORDER BY ride_count DESC;
+
+12. Frequency of Casual Riders Using Bikes for Commuting Hours
+SELECT 
+    hour, 
+    COUNT(*) AS ride_count
+FROM trips
+WHERE member_casual = 'casual'
+  AND (hour BETWEEN 7 AND 9 OR hour BETWEEN 16 AND 18)
+GROUP BY hour
+ORDER BY hour;
