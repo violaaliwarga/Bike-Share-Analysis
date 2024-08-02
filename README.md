@@ -179,10 +179,8 @@ Casual riders are active during peak commuting hours, with significant usage rec
 - **Ride Preferences**: Casual riders use bikes mainly in the late afternoon and visit popular city locations. Annual members ride more during weekdays and stick to regular commuting routes. Both groups prefer electric bikes, but at different times.
 - **Membership Motivation**: Casual riders frequently use popular stations and are active during peak commuting hours. Highlighting the convenience and savings of membership at these stations and times can be effective. Personalized offers and targeted promotions can address casual riders' specific needs and preferences.
 
-## 6. Media Campaign Recommendations based on the analysis.
+## 6. Media Campaign Recommendations
 
-- Highlight Usage Trends: Tailor digital media campaigns to focus on peak usage times and popular routes for casual riders. For instance, targeting late afternoon to early evening periods, when casual riders are most active, could increase campaign effectiveness. Include metrics like click-through rates and engagement levels to measure campaign success.
-  
-- Promote Convenience and Savings: Emphasize how a membership can streamline access to popular start and end stations and offer savings during key commuting hours. For example, promoting how a membership facilitates easier access to high-demand stations like Streeter Dr & Grand Ave and Millennium Park, and provides savings during peak commuting times, could be compelling. Consider gathering feedback from new members to refine these promotions.
-  
-- Customize Offers: Create personalized offers or promotions that cater to the specific needs of casual riders, such as frequent use of electric bikes or popular afternoon start times. Highlight how memberships align with their ride duration preferences and peak times to make the transition more appealing. Explore various promotion channels like social media, email campaigns, and local partnerships to enhance outreach.
+1. **Highlight Usage Trends**: Focus campaigns on peak times and popular routes for casual riders. Target late afternoons to early evenings when casual riders are most active. Use metrics like click-through rates and engagement levels to gauge campaign success.
+2. **Promote Convenience and Savings**: Emphasize how memberships provide easier access to popular stations and offer savings during peak commuting hours. Highlight the benefits of membership for high-demand stations and times, and use feedback from new members to refine these messages.
+3. **Customize Offers**: Develop personalized promotions based on casual riders' preferences, such as frequent use of electric bikes or popular start times. Showcase how memberships fit their ride habits to make the transition more attractive. Utilize social media, email campaigns, and local partnerships to reach target audiences effectively.
