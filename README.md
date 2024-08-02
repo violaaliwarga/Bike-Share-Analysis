@@ -57,7 +57,7 @@ For this analysis, I used historical trip data covering January 2020 to June 202
 
 ### 3.1. Tools
 
-This analysis utilizes Python for data processing, specifically to combine the 52 .csv files into a single .csv file. Python is also employed for data cleaning and manipulation to ensure the dataset is prepared and ready for analysis.
+For this analysis, I used Python 3 in Jupyter Notebook to process the data, including combining 52 separate .csv files into one comprehensive dataset. Python was also essential for cleaning and preparing the data for further analysis. I then utilized PostgreSQL to perform further analysis according to my project objectives. Finally, I will use Tableau Public to visualize and present my findings.
 
 ### 3.2. Combining Multiple .csv Files
 
