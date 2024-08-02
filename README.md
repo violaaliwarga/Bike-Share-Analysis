@@ -63,12 +63,10 @@ This analysis utilizes Python for data processing, specifically to combine the 5
 
 To consolidate the 52 .csv files into a single dataset, Python's pandas library is used. This process involves:
 * **Listing the Files**: Identifying all .csv files in the dataset folder using `os.listdir()`. <br>
-  <img width="201" alt="Screenshot 2024-07-31 at 5 00 51 PM" src="https://github.com/user-attachments/assets/f0695e66-c860-4cb8-a9e7-ef270d1fdc38"> <br>
+  <img width="166" alt="Screenshot 2024-08-02 at 10 38 48 AM" src="https://github.com/user-attachments/assets/9aa2d59a-b649-4474-95b4-750878dcedb0"> <br>
 * **Loading the Files**: Reading each .csv file into separate DataFrames using `pd.read_csv()`.
 * **Merging Data**: Combining these DataFrames into one comprehensive DataFrame using `pd.concat()`.<br>
-  <img width="333" alt="Screenshot 2024-07-31 at 4 58 44 PM" src="https://github.com/user-attachments/assets/f74063d6-23a9-406f-a2d4-9e98686e6243"> <br>
-* **Checking Metadata**: Verifying column names and consistency across the DataFrames.<br>
-  <img width="277" alt="Screenshot 2024-07-31 at 4 59 08 PM" src="https://github.com/user-attachments/assets/68454251-bcbe-4492-bfab-943e812a53e3"> <br>
+  <img width="249" alt="Screenshot 2024-08-02 at 10 39 24 AM" src="https://github.com/user-attachments/assets/f285c4f9-fc97-4c03-82f1-833f50882d3c"> <br>
 * **Saving the Consolidated Data**: Exporting the combined DataFrame into a single .csv file using `DataFrame.to_csv()` for further analysis. This ensures that all data is unified and readily accessible for subsequent cleaning and analysis.
 
 ### 3.3. Data Cleaning & Manipulation
@@ -77,7 +75,7 @@ Handling missing data is a critical step in data cleaning and manipulation, espe
 
 #### 3.3.1. Checking for Missing Data
 First, I checked for the presence of missing data in the dataset using `pandas.isnull()`. Here's what I got: <br>
-<img width="318" alt="Screenshot 2024-07-30 at 3 40 29 PM" src="https://github.com/user-attachments/assets/36a1ff23-5b1f-4e8e-abf0-656efc7cf746">
+<img width="199" alt="Screenshot 2024-08-02 at 10 39 39 AM" src="https://github.com/user-attachments/assets/1a73aaa5-ea8b-4757-b007-9b766b7a8d3e">
 
 #### 3.3.2. Identify Missing Data
 To effectively handle missing data, it's essential to first determine the extent of missing values in each column. This step informs the appropriate methods for addressing the missing data. Here are the steps that I took:
@@ -87,11 +85,11 @@ I flagged the missing values in each column by converting False (no missing valu
 
 ##### b. Visualizing Missing Data Distribution
 I plotted the distribution of missing values using Matplotlib `plot()` function to identify patterns and the extent of missing data across the dataset. Here's the result: <br>
-<img width="407" alt="Screenshot 2024-07-30 at 3 49 00 PM" src="https://github.com/user-attachments/assets/7e0a898c-a383-4d1a-b0e1-ea1522ca4021">
+<img width="306" alt="Screenshot 2024-08-02 at 10 39 53 AM" src="https://github.com/user-attachments/assets/9696c162-5862-46de-9192-b6f05c5351dd">
 
 ##### c. Analyzing Correlations
 I also checked the correlation between the variables, using Pandas `DataFrame.corr()`, to understand how missing values might relate to other features in the dataset. <br>
-<img width="588" alt="Screenshot 2024-07-30 at 3 49 55 PM" src="https://github.com/user-attachments/assets/10d5a4e5-34f2-4663-9940-d35019a9742a"> <br>
+<img width="471" alt="Screenshot 2024-08-02 at 10 40 09 AM" src="https://github.com/user-attachments/assets/32370240-a1f6-4f4f-a42a-fab22f3071c0"> <br>
 As shown in the picture above, the correlation coefficients ranged from -0.01 to 1.0. What does it mean? A coefficient close to 0, such as -0.01, indicates a very weak relationship between the variables. In this case, missing data in one column has little to no correlation with missing data in other columns. Whereas a coefficient of 1.0 suggests a perfect positive correlation, meaning that if one column has missing data, the other column will also have missing data in exactly the same pattern.
 
 #### 3.3.3. Handling Missing Data
@@ -112,6 +110,20 @@ First, I made a list of columns that shouldn’t be scaled or imputed (non-categ
 Although optional, I normalized the data to ensure that all features contributed equally to the KNN calculations. Then, I used the KNN algorithm to fill in the missing values by looking at the nearest data points. After imputing the missing values, I reversed the scaling to bring the data back to its original scale.
 
 3. Post-process the Data
-I converted any numerical columns that were originally categorical back to their original form. I then reattached the columns that were excluded from the scaling and imputation process. Finally, I reviewed the newly completed DataFrame to ensure everything was in order.
+I converted any numerical columns that were originally categorical back to their original form. I then reattached the columns that were excluded from the scaling and imputation process. Finally, I reviewed the newly completed DataFrame to ensure everything was in order. <br>
 
-By using KNN, I was able to fill in the missing station data accurately, keeping the dataset intact and making sure my analysis remained reliable.
+By using KNN, I was able to fill in the missing station data accurately, keeping the dataset intact and making sure my analysis remained reliable. <br>
+
+<img width="219" alt="Screenshot 2024-08-02 at 10 41 12 AM" src="https://github.com/user-attachments/assets/c0b8f2d7-8ffe-43ec-a5f9-0513ffe216fa"> <br>
+
+<img width="145" alt="Screenshot 2024-08-02 at 10 41 32 AM" src="https://github.com/user-attachments/assets/17ab6deb-b8ab-4a31-83c5-6f8dddf7373a"> <br>
+
+#### 3.3.4. Creating New Columns Necessary for Analysis
+
+##### a. Assigning Appropriate DataType to `started_at` & `ended_at`
+To be able to do what i want to do next, i have to convert the two columns to datetime datatype. <br>
+<img width="272" alt="Screenshot 2024-08-02 at 10 41 43 AM" src="https://github.com/user-attachments/assets/1e00788d-038e-4a73-b5e8-b201265bbdbf">
+
+##### b. Creating New Columns `month`, `day`, `hour`, and `duration_minutes`
+To complete my analysis in the next step, i would like to make new columns.
+<img width="328" alt="Screenshot 2024-08-02 at 10 42 04 AM" src="https://github.com/user-attachments/assets/977441ae-9531-4ff1-9299-7c9d28a59583">
