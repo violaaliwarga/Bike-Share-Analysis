@@ -139,9 +139,15 @@ To dig deeper into the data, I created new columns from the started_at and ended
 
 ## 4. Analysis
 
-### 4.1. Detailed Analysis
+### 4.1. Findings
 
 #### 4.1.1. How do the total number of rides compare between membership types?
+
+| member_casual  | total_rides |
+| ------------- | ------------- |
+| casual  | 9,072,123  |
+| cember | 13,820,576  |
+
 Casual riders have made 9,072,123 rides, while annual members have made 13,820,576 rides. This significant difference indicates that annual members engage with the bike-share system more frequently, suggesting either higher engagement or more regular usage among this group.
 
 #### 4.1.2. What is the average ride duration for each membership type?
@@ -174,12 +180,12 @@ Casual riders frequently use stations such as Streeter Dr & Grand Ave, Michigan 
 #### 4.2.11. How frequently do casual riders use bikes during commuting hours?
 Casual riders are active during peak commuting hours, with significant usage recorded at 7:00 (192,003 rides), 8:00 (261,577 rides), 9:00 (285,530 rides), 16:00 (780,419 rides), 17:00 (868,303 rides), and 18:00 (770,277 rides). This shows a strong presence during both the morning and evening commuting periods.
 
-### 4.2. Analysis Summary
+### 4.2. Summary
 - **Usage Patterns**: Annual members ride more frequently and prefer shorter trips, while casual riders take longer rides and are more active on weekends.
 - **Ride Preferences**: Casual riders use bikes mainly in the late afternoon and visit popular city locations. Annual members ride more during weekdays and stick to regular commuting routes. Both groups prefer electric bikes, but at different times.
 - **Membership Motivation**: Casual riders frequently use popular stations and are active during peak commuting hours. Highlighting the convenience and savings of membership at these stations and times can be effective. Personalized offers and targeted promotions can address casual riders' specific needs and preferences.
   
-## 5. Supporting Visualization and Detailed Findings
+## 5. Supporting Visualization
 
 ## 6. Media Campaign Recommendations
 
