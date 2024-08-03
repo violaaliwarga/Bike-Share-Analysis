@@ -142,7 +142,7 @@ To dig deeper into the data, I created new columns from the started_at and ended
 ### 4.1. Findings
 
 #### 4.1.1. How do the total number of rides compare between membership types?
-<img width="335" alt="Total Rides" src="https://github.com/user-attachments/assets/5badd9f5-1da1-45ca-9abd-82d668c3a4b8"> <br>
+<img width="250" alt="Total Rides_main" src="https://github.com/user-attachments/assets/d17d7ba4-d218-4798-80be-3fad3dd50bd0"><img width="50" alt="Total Rides_leg" src="https://github.com/user-attachments/assets/d70525e8-f290-47b1-99b6-eb2ae3e96fa0"><br>
 Casual riders have made 9,072,123 rides, while annual members have made 13,820,576 rides. This significant difference indicates that annual members engage with the bike-share system more frequently, suggesting either higher engagement or more regular usage among this group.
 
 #### 4.1.2. What is the average ride duration for each membership type?
