@@ -151,13 +151,15 @@ Casual riders have made 9,072,123 rides, while annual members have made 13,820,5
 The average ride duration for casual riders is 28 minutes, compared to 13 minutes for annual members. This suggests that casual riders generally take longer rides, while annual members tend to make shorter, more frequent trips.
 
 #### 4.1.3. How does the number of rides vary by day of the week for each membership type?
-<img width="350" alt="Rides by Day of the Week" src="https://github.com/user-attachments/assets/03317772-178c-4873-9d87-a579c79bcbb1"> <br>
+<img width="400" alt="Rides by Day of the Week" src="https://github.com/user-attachments/assets/03317772-178c-4873-9d87-a579c79bcbb1"> <br>
 Casual riders show peak usage on weekends, with the highest number of rides occurring on Saturday (1,920,554) and Sunday (1,606,326). Their lowest usage is observed on Tuesday (1,009,584). In contrast, annual members have their highest usage on Wednesday (2,177,786) and Tuesday (2,119,614), with the lowest on Sunday (1,623,645). This pattern indicates that casual riders are more active during weekends, while annual members use the service more regularly throughout the workweek.
 
 #### 4.1.4. What are the patterns of bike usage by hour of the day for each membership type?
+<img width="400" alt="Rides by Hour of the Day" src="https://github.com/user-attachments/assets/3584f3d6-0c03-4f53-a0cb-7817b8e84c46"> <br>
 Casual riders experience peak bike usage in the late afternoon to early evening, especially between 17:00 and 18:00, with 868,303 rides. Annual members, on the other hand, peak in the morning and early afternoon, with the highest number of rides at 17:00 (1,464,955). Both casual and annual members show similar patterns of low usage late at night, from 00:00 to 04:00. This suggests that while casual riders favor the late afternoon and evening, annual members use bikes more during typical commuting hours.
 
 #### 4.1.5. What are the top 10 most frequent routes taken by each membership type?
+<img width="400" alt="Top 10 Most Frequent Routes" src="https://github.com/user-attachments/assets/69fcb923-668a-4a45-bbd4-ccd2d3ec889d"> <br>
 Casual riders frequently travel to popular city locations such as DuSable Lake Shore Dr & Monroe St and Millennium Park. Annual members, however, often take routes like Ellis Ave & 60th St and University Ave & 57th St. This indicates that casual riders are more likely to visit notable city destinations, while annual members’ routes are more indicative of regular commuting or specific destinations.
 
 #### 4.1.6. How do rideable type preferences vary by time of day and membership type?**
