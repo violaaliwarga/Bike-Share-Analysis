@@ -98,3 +98,17 @@ WHERE member_casual = 'casual'
   AND (hour BETWEEN 7 AND 9 OR hour BETWEEN 16 AND 18)
 GROUP BY hour
 ORDER BY hour;
+
+Seasonal Trends: What Time of Year?
+SELECT 
+    EXTRACT(MONTH FROM started_at) AS month, 
+    member_casual,
+    COUNT(ride_id) AS total_rides
+FROM 
+    trips
+GROUP BY 
+    EXTRACT(MONTH FROM started_at), 
+    member_casual
+ORDER BY 
+    month, 
+    member_casual;
