@@ -151,6 +151,7 @@ Casual riders have made 9,072,123 rides, while annual members have made 13,820,5
 The average ride duration for casual riders is 28 minutes, compared to 13 minutes for annual members. This suggests that casual riders generally take longer rides, while annual members tend to make shorter, more frequent trips.
 
 #### 4.1.3. How does the number of rides vary by day of the week for each membership type?
+<img width="350" alt="Rides by Day of the Week" src="https://github.com/user-attachments/assets/03317772-178c-4873-9d87-a579c79bcbb1"> <br>
 Casual riders show peak usage on weekends, with the highest number of rides occurring on Saturday (1,920,554) and Sunday (1,606,326). Their lowest usage is observed on Tuesday (1,009,584). In contrast, annual members have their highest usage on Wednesday (2,177,786) and Tuesday (2,119,614), with the lowest on Sunday (1,623,645). This pattern indicates that casual riders are more active during weekends, while annual members use the service more regularly throughout the workweek.
 
 #### 4.1.4. What are the patterns of bike usage by hour of the day for each membership type?
