@@ -185,7 +185,8 @@ Casual riders predominantly start their rides between 13:00 and 15:00 on weekend
 Casual riders primarily use electric bikes, accounting for 3,939,580 rides, followed by classic bikes (3,428,739 rides) and docked bikes (1,703,804 rides). Electric bikes are the most popular among casual riders.
 
 #### 4.1.10. What are the most common start and end stations for casual riders?
-<img width="500" alt="Top 10 Start Stations for Casual Riders" src="https://github.com/user-attachments/assets/a88a5a86-6a76-478b-8075-142f20682e09"> <br>
+<img width="500" alt="Top 10 Start Stations for Casual Riders" src="https://github.com/user-attachments/assets/42892ffa-6381-4797-b5b1-931a23b570bb">
+ <br>
 Casual riders frequently use stations such as Streeter Dr & Grand Ave, Michigan Ave & Oak St, and DuSable Lake Shore Dr & Monroe St. The most popular start and end station is Streeter Dr & Grand Ave, with 40,196 rides. Other notable stations include Michigan Ave & Oak St (19,954 rides) and DuSable Lake Shore Dr & Monroe St (19,823 rides). Casual riders also frequently visit Millennium Park, Buckingham Fountain, and Theater on the Lake, among others.
 
 #### 4.2.11. How frequently do casual riders use bikes during commuting hours?
