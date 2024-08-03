@@ -146,7 +146,7 @@ To dig deeper into the data, I created new columns from the started_at and ended
 Casual riders have made 9,072,123 rides, while annual members have made 13,820,576 rides. This significant difference indicates that annual members engage with the bike-share system more frequently, suggesting either higher engagement or more regular usage among this group.
 
 #### 4.1.2. What is the average ride duration for each membership type?
-<img width="418" alt="Average Ride Duration" src="https://github.com/user-attachments/assets/ae7bacc7-7697-487b-ba82-9e04e4b06871"> <br>
+<img width="335" alt="Average Ride Duration" src="https://github.com/user-attachments/assets/ae7bacc7-7697-487b-ba82-9e04e4b06871"> <br>
 The average ride duration for casual riders is 28 minutes, compared to 13 minutes for annual members. This suggests that casual riders generally take longer rides, while annual members tend to make shorter, more frequent trips.
 
 #### 4.1.3. How does the number of rides vary by day of the week for each membership type?
