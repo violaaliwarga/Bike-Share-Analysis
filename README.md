@@ -159,10 +159,12 @@ Casual riders show peak usage on weekends, with the highest number of rides occu
 Casual riders experience peak bike usage in the late afternoon to early evening, especially between 17:00 and 18:00, with 868,303 rides. Annual members, on the other hand, peak in the morning and early afternoon, with the highest number of rides at 17:00 (1,464,955). Both casual and annual members show similar patterns of low usage late at night, from 00:00 to 04:00. This suggests that while casual riders favor the late afternoon and evening, annual members use bikes more during typical commuting hours.
 
 #### 4.1.5. What are the top 10 most frequent routes taken by each membership type?
-<img width="500" alt="Top 10 Most Frequent Routes" src="https://github.com/user-attachments/assets/69fcb923-668a-4a45-bbd4-ccd2d3ec889d"> <br>
+<img width="500" alt="Top 10 Most Frequent Routes" src="https://github.com/user-attachments/assets/d01896da-35d6-42b1-bdde-a914cf881af6"> <br>
 Casual riders frequently travel to popular city locations such as DuSable Lake Shore Dr & Monroe St and Millennium Park. Annual members, however, often take routes like Ellis Ave & 60th St and University Ave & 57th St. This indicates that casual riders are more likely to visit notable city destinations, while annual members’ routes are more indicative of regular commuting or specific destinations.
 
 #### 4.1.6. How do rideable type preferences vary by time of day and membership type?**
+<img width="1000" alt="Preference Bike Type" src="https://github.com/user-attachments/assets/e8c23041-a5e6-4702-979b-7b308c4cd570">
+ <br>
 Casual riders prefer electric bikes, with peak usage occurring between 12:00 and 18:00, aligning with midday to early evening activities. In contrast, annual members favor classic bikes, especially during the morning and early afternoon hours, likely reflecting their use for regular commutes.
 
 #### 4.1.7. What are the popular ride duration segments for each membership type?
