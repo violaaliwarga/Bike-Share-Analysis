@@ -3,7 +3,7 @@
 
 *This project was done to complete the [Google Data Analytics Certification](https://www.coursera.org/professional-certificates/google-data-analytics) on Coursera. The names of the company and any individuals mentioned here are entirely fictional, but the analysis uses a real dataset provided under a [public license](https://www.divvybikes.com/data-license-agreement).*
 
-*The output and the complete code for all these steps are available in a separate file [here].*
+*A more simplified analysis can be found on my website [here](https://violaaliwarga.wixsite.com/data/post/unraveling-the-cyclistic-data-how-casual-riders-and-members-differ-in-their-bike-sharing-habits).*
 
 ## Overview and Analysis Approach
 
