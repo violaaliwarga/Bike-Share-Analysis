@@ -1,41 +1,39 @@
-Queries for Analysis in PostgreSQL According to the Outlined Objectives
-
-4.1.1. Total Rides by Membership Type
+Total Rides by Membership Type
 SELECT member_casual, COUNT(*) AS total_rides
 FROM trips
 GROUP BY member_casual;
 
-4.1.2. Average Ride Duration by Membership Type
+Average Ride Duration by Membership Type
 SELECT member_casual, ROUND(AVG(duration_minutes)) AS avg_duration
 FROM trips
 GROUP BY member_casual;
 
-4.1.3. Rides by Day of the Week by Membership Type
+Rides by Day of the Week by Membership Type
 SELECT member_casual, day, COUNT(*) AS ride_count
 FROM trips
 GROUP BY member_casual, day
 ORDER BY member_casual, day;
 
-4.1.4. Rides by Hour of the Day by Membership Type
+Rides by Hour of the Day by Membership Type
 SELECT member_casual, hour, COUNT(*) AS total_rides
 FROM trips
 GROUP BY member_casual, hour
 ORDER BY member_casual, hour;
 
-4.1.5. Top 10 Most Frequent Routes by Membership Type
+Top 10 Most Frequent Routes by Membership Type
 SELECT member_casual, start_station_name, end_station_name, COUNT(*) AS ride_count
 FROM trips
 GROUP BY member_casual, start_station_name, end_station_name
 ORDER BY ride_count DESC
 LIMIT 10;
 
-4.1.6. Rideable Type Preference by Time of Day and Membership Type
+Rideable Type Preference by Time of Day and Membership Type
 SELECT member_casual, hour, rideable_type, COUNT(*) AS ride_count
 FROM trips
 GROUP BY member_casual, hour, rideable_type
 ORDER BY member_casual, hour, rideable_type;
 
-4.1.7. Popular Ride Duration Segments
+Popular Ride Duration Segments
 SELECT 
     member_casual,
     CASE 
@@ -50,7 +48,7 @@ WHERE duration_minutes > 0
 GROUP BY member_casual, ride_segment
 ORDER BY member_casual, ride_segment;
 
-4.1.8. Popular Start Times for Casual Riders on Weekends
+Popular Start Times for Casual Riders on Weekends
 SELECT 
     hour, 
     COUNT(*) AS ride_count
@@ -60,7 +58,7 @@ WHERE member_casual = 'casual'
 GROUP BY hour
 ORDER BY ride_count DESC;
 
-4.1.9. Analysis of Casual Riders Using Specific Rideable Types
+Analysis of Casual Riders Using Specific Rideable Types
 SELECT 
     rideable_type, 
     COUNT(*) AS ride_count
@@ -69,7 +67,7 @@ WHERE member_casual = 'casual'
 GROUP BY rideable_type
 ORDER BY ride_count DESC;
 
-4.1.10. Proximity of Start and End Stations for Casual Riders
+Proximity of Start and End Stations for Casual Riders
 SELECT 
     start_station_name, 
     start_lat,
@@ -89,7 +87,7 @@ GROUP BY
     end_lng
 ORDER BY ride_count DESC;
 
-4.1.11. Frequency of Casual Riders Using Bikes for Commuting Hours
+Frequency of Casual Riders Using Bikes for Commuting Hours
 SELECT 
     hour, 
     COUNT(*) AS ride_count
