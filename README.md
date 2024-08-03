@@ -151,6 +151,7 @@ Casual riders have made 9,072,123 rides, while annual members have made 13,820,5
 | --- | --- |
 | Casual | 28 minutes |
 | Annual | 13 minutes |
+
 Casual riders generally take longer rides, while annual members tend to make shorter, more frequent trips.
 
 #### 4.1.3. How does the number of rides vary by day of the week for each membership type?
