@@ -72,11 +72,21 @@ ORDER BY ride_count DESC;
 4.1.10. Proximity of Start and End Stations for Casual Riders
 SELECT 
     start_station_name, 
+    start_lat,
+    start_lng,
     end_station_name, 
+    end_lat,
+    end_lng,
     COUNT(*) AS ride_count
 FROM trips
 WHERE member_casual = 'casual'
-GROUP BY start_station_name, end_station_name
+GROUP BY 
+    start_station_name, 
+    start_lat,
+    start_lng,
+    end_station_name, 
+    end_lat,
+    end_lng
 ORDER BY ride_count DESC;
 
 4.1.11. Frequency of Casual Riders Using Bikes for Commuting Hours
