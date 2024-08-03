@@ -159,7 +159,7 @@ Casual riders generally take longer rides, while annual members tend to make sho
 Casual riders show peak usage on weekends, with the highest number of rides occurring on Saturday (1,920,554) and Sunday (1,606,326). Their lowest usage is observed on Tuesday (1,009,584). In contrast, annual members have their highest usage on Wednesday (2,177,786) and Tuesday (2,119,614), with the lowest on Sunday (1,623,645). This pattern indicates that casual riders are more active during weekends, while annual members use the service more regularly throughout the workweek.
 
 #### What are the patterns of bike usage by hour of the day for each membership type?
-<img width="500" alt="Rides by Hour of the Day" src="https://github.com/user-attachments/assets/3584f3d6-0c03-4f53-a0cb-7817b8e84c46"> <br>
+<img width="500" alt="Rides by Hour of the Day" src="https://github.com/user-attachments/assets/dc9300bd-bdcb-4e1c-ac48-bc222e0dfce5"> <br>
 Casual riders experience peak bike usage in the late afternoon to early evening, especially between 17:00 and 18:00, with 868,303 rides. Annual members, on the other hand, peak in the morning and early afternoon, with the highest number of rides at 17:00 (1,464,955). Both casual and annual members show similar patterns of low usage late at night, from 00:00 to 04:00. This suggests that while casual riders favor the late afternoon and evening, annual members use bikes more during typical commuting hours.
 
 #### What are the top 10 most frequent routes taken by each membership type?
