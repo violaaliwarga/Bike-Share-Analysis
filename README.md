@@ -141,12 +141,12 @@ To dig deeper into the data, I created new columns from the started_at and ended
 
 ### 4.1. Findings
 
-#### 4.1.1. How do the total number of rides compare between membership types?
+#### How do the total number of rides compare between membership types?
 <img width="250" alt="Total Rides_main" src="https://github.com/user-attachments/assets/d17d7ba4-d218-4798-80be-3fad3dd50bd0">
 <img width="50" alt="Total Rides_leg" src="https://github.com/user-attachments/assets/d70525e8-f290-47b1-99b6-eb2ae3e96fa0"><br>
 Casual riders have made 9,072,123 rides, while annual members have made 13,820,576 rides. This significant difference indicates that annual members engage with the bike-share system more frequently, suggesting either higher engagement or more regular usage among this group.
 
-#### 4.1.2. What is the average ride duration for each membership type?
+#### What is the average ride duration for each membership type?
 | Membership Type | Average Duration |
 | --- | --- |
 | Casual | 28 minutes |
@@ -154,41 +154,41 @@ Casual riders have made 9,072,123 rides, while annual members have made 13,820,5
 
 Casual riders generally take longer rides, while annual members tend to make shorter, more frequent trips.
 
-#### 4.1.3. How does the number of rides vary by day of the week for each membership type?
+#### How does the number of rides vary by day of the week for each membership type?
 <img width="500" alt="Rides by Day of the Week" src="https://github.com/user-attachments/assets/03317772-178c-4873-9d87-a579c79bcbb1"> <br>
 Casual riders show peak usage on weekends, with the highest number of rides occurring on Saturday (1,920,554) and Sunday (1,606,326). Their lowest usage is observed on Tuesday (1,009,584). In contrast, annual members have their highest usage on Wednesday (2,177,786) and Tuesday (2,119,614), with the lowest on Sunday (1,623,645). This pattern indicates that casual riders are more active during weekends, while annual members use the service more regularly throughout the workweek.
 
-#### 4.1.4. What are the patterns of bike usage by hour of the day for each membership type?
+#### What are the patterns of bike usage by hour of the day for each membership type?
 <img width="500" alt="Rides by Hour of the Day" src="https://github.com/user-attachments/assets/3584f3d6-0c03-4f53-a0cb-7817b8e84c46"> <br>
 Casual riders experience peak bike usage in the late afternoon to early evening, especially between 17:00 and 18:00, with 868,303 rides. Annual members, on the other hand, peak in the morning and early afternoon, with the highest number of rides at 17:00 (1,464,955). Both casual and annual members show similar patterns of low usage late at night, from 00:00 to 04:00. This suggests that while casual riders favor the late afternoon and evening, annual members use bikes more during typical commuting hours.
 
-#### 4.1.5. What are the top 10 most frequent routes taken by each membership type?
+#### What are the top 10 most frequent routes taken by each membership type?
 <img width="500" alt="Top 10 Most Frequent Routes" src="https://github.com/user-attachments/assets/d01896da-35d6-42b1-bdde-a914cf881af6"> <br>
 Casual riders frequently travel to popular city locations such as DuSable Lake Shore Dr & Monroe St and Millennium Park. Annual members, however, often take routes like Ellis Ave & 60th St and University Ave & 57th St. This indicates that casual riders are more likely to visit notable city destinations, while annual members’ routes are more indicative of regular commuting or specific destinations.
 
-#### 4.1.6. How do rideable type preferences vary by time of day and membership type?**
+#### How do rideable type preferences vary by time of day and membership type?**
 <img width="1000" alt="Preference Bike Type" src="https://github.com/user-attachments/assets/e8c23041-a5e6-4702-979b-7b308c4cd570">
  <br>
 Casual riders prefer electric bikes, with peak usage occurring between 12:00 and 18:00, aligning with midday to early evening activities. In contrast, annual members favor classic bikes, especially during the morning and early afternoon hours, likely reflecting their use for regular commutes.
 
-#### 4.1.7. What are the popular ride duration segments for each membership type?
+#### What are the popular ride duration segments for each membership type?
 <img width="500" alt="Popular Ride Duration Segments_main" src="https://github.com/user-attachments/assets/bd4e55f6-15d6-4677-b2ce-b6b2e5e953c9">
 <img width="50" alt="Popular Ride Duration Segments_leg" src="https://github.com/user-attachments/assets/410de91f-3820-40c5-b9c9-f1819258f0d7"> <br>
 For casual riders, the most popular ride duration segments are medium (3,634,730 rides) and long (2,396,451 rides) rides. Annual members prefer medium (6,891,259 rides) and short (3,139,432 rides) rides. This indicates that casual riders are inclined towards longer rides, while annual members favor shorter, more frequent trips.
 
-#### 4.1.8. What are the popular start times for casual riders on weekends?
+#### What are the popular start times for casual riders on weekends?
 <img width="500" alt="Popular Start Times for Casual Riders on Weekends" src="https://github.com/user-attachments/assets/4de74b0a-7db8-4e2c-b44e-ac43adc98571"> <br>
 Casual riders predominantly start their rides between 13:00 and 15:00 on weekends, with the peak start time at 15:00 (310,933 rides). This suggests that the early to mid-afternoon is a popular time for casual riders to begin their rides on weekends.
 
-#### 4.1.9. How do casual riders use specific rideable types?
+#### How do casual riders use specific rideable types?
 <img width="500" alt="Casual Riders on Their Preferred Bike Types" src="https://github.com/user-attachments/assets/b5742bb9-1998-44c2-b8d0-0211663befbc"> <br>
 Casual riders primarily use electric bikes, accounting for 3,939,580 rides, followed by classic bikes (3,428,739 rides) and docked bikes (1,703,804 rides). Electric bikes are the most popular among casual riders.
 
-#### 4.1.10. What are the most common start and end stations for casual riders?
+#### What are the most common start and end stations for casual riders?
 <img width="500" alt="Top 10 Stations for Casual Riders" src="https://github.com/user-attachments/assets/6b9e2477-d135-4bc8-b931-5b841a87d71c"> <br>
 Casual riders frequently use stations such as Streeter Dr & Grand Ave, Michigan Ave & Oak St, and DuSable Lake Shore Dr & Monroe St. The most popular start and end station is Streeter Dr & Grand Ave, with 40,196 rides. Other notable stations include Michigan Ave & Oak St (19,954 rides) and DuSable Lake Shore Dr & Monroe St (19,823 rides). Casual riders also frequently visit Millennium Park, Buckingham Fountain, and Theater on the Lake, among others.
 
-#### 4.2.11. How frequently do casual riders use bikes during commuting hours?
+#### How frequently do casual riders use bikes during commuting hours?
 <img width="500" alt="Frequency of Casual Riders Using Bikes for Commuting Hours" src="https://github.com/user-attachments/assets/3279c925-6765-4eea-a2cf-8ea304c1a014"> <br>
 Casual riders are active during peak commuting hours, with significant usage recorded at 7:00 (192,003 rides), 8:00 (261,577 rides), 9:00 (285,530 rides), 16:00 (780,419 rides), 17:00 (868,303 rides), and 18:00 (770,277 rides). This shows a strong presence during both the morning and evening commuting periods.
 
